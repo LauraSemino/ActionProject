@@ -2,6 +2,8 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Conditions {
@@ -10,7 +12,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
 
         public BBParameter<List<string>> onPlate;
-
+        public TextMeshPro youWin;
+        public GameObject sandwhich;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit(){
@@ -38,6 +41,8 @@ namespace NodeCanvas.Tasks.Conditions {
                 }
                 else
                 {
+                    youWin.gameObject.SetActive(false);
+                    sandwhich.SetActive(false);
                     return false;
                 }
             }

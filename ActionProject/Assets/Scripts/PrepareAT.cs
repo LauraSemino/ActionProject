@@ -35,7 +35,6 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnUpdate() {
             if (Vector3.Distance(plate.position, navAgent.transform.position) < 2)
             {
-
                 onPlate.value.Add(ingredientName.value);
                 hasIngredient.value = false;
                 ingredientName.value = "None";
